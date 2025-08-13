@@ -1,11 +1,15 @@
+import { getCurrentUser } from '@/lib/appwrite'
+import { User } from '@/type'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
-const Profile = () => {
+const Profile = ({ user: { name, email }}: { user: User }) => {
+  const user = getCurrentUser();
+
   return (
-    <View>
-      <Text>Profile</Text>
-    </View>
+    <SafeAreaView className='bg-white h-full'>
+      
+    </SafeAreaView>
   )
 }
 
